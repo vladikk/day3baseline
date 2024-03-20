@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "12e0712f-518b-432a-aba8-d59fe0955586",
+		"name": "Aircrafts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33730027"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/aircrafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aircrafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/aircrafts/737-300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aircrafts",
+						"737-300"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"797-300\",\n    \"manufacturer\": \"SuperBoeing\",\n    \"wingspan_m\": \"28.90\",\n    \"cabin_width_m\": \"3.54\",\n    \"cabin_height_m\": \"2.20\",\n    \"cabin_length_m\": \"24.13\",\n    \"cargo_capacity_mc\": \"27.50\",\n    \"range_km\": 4444,\n    \"cruise_speed_m\": \"0.785\",\n    \"engine_type\": \"CFM56-3 Series\",\n    \"noise_level_epndb_min\": 65,\n    \"noise_level_epndb_max\": 70,\n    \"__version\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/aircrafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aircrafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"797-300\",\n    \"manufacturer\": \"SuperBoeing\",\n    \"wingspan_m\": \"28.90\",\n    \"cabin_width_m\": \"3.54\",\n    \"cabin_height_m\": \"2.20\",\n    \"cabin_length_m\": \"24.13\",\n    \"cargo_capacity_mc\": \"27.50\",\n    \"range_km\": 4444,\n    \"cruise_speed_m\": \"0.785\",\n    \"engine_type\": \"CFM56-3 Series\",\n    \"noise_level_epndb_min\": 6,\n    \"noise_level_epndb_max\": 7,\n    \"__version\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/aircrafts/797-300?expectedVersion=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aircrafts",
+						"797-300"
+					],
+					"query": [
+						{
+							"key": "expectedVersion",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

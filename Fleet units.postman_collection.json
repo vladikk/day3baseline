@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "f4e8f2df-d002-41aa-a83d-bb0e0c4cf7aa",
+		"name": "Fleet units",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33730027"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fleet-units",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fleet-units"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fleet-units/E752",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fleet-units",
+						"E752"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tailNumber\": \"E777\",\n    \"model\": \"777-200\",\n    \"manufacturingDate\": \"1987-09-12T00:00:00.000Z\",\n    \"dateOfPurchase\": \"1988-06-30T00:00:00.000Z\",\n    \"nextMaintenanceDate\": \"1989-06-10T00:00:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fleet-units",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fleet-units"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tailNumber\": \"E777\",\n    \"model\": \"777-700\",\n    \"manufacturingDate\": \"1997-09-12T00:00:00.000Z\",\n    \"dateOfPurchase\": \"1998-06-30T00:00:00.000Z\",\n    \"nextMaintenanceDate\": \"1999-06-10T00:00:00.000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fleet-units/E777?expectedVersion=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fleet-units",
+						"E777"
+					],
+					"query": [
+						{
+							"key": "expectedVersion",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

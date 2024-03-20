@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "534f5df5-53a6-4727-bdbb-7a2411a2226b",
+		"name": "Seat Types",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33730027"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/seat-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seat-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/seat-types/ECON-MILN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seat-types",
+						"ECON-MILN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seat_type_id\": \"SUPER_SEAT\",\n    \"type_name\": \"Super Seat\",\n    \"width_cm\": 450,\n    \"height_cm\": 120,\n    \"pitch_cm\": 172,\n    \"weight_kg\": 216,\n    \"production_year\": 3000,\n    \"comfort_level\": 125,\n    \"features\": \"The best ever\",\n    \"__version\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/seat-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seat-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seat_type_id\": \"SUPER_SEAT\",\n    \"type_name\": \"Super Seat\",\n    \"width_cm\": 450,\n    \"height_cm\": 120,\n    \"pitch_cm\": 172,\n    \"weight_kg\": 216,\n    \"production_year\": 3000,\n    \"comfort_level\": 125,\n    \"features\": \"The best ever!!!1\",\n    \"__version\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/seat-types/SUPER_SEAT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seat-types",
+						"SUPER_SEAT"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
